@@ -1,4 +1,5 @@
 import apidata from "../utils/apidata";
+import { Link } from "react-router-dom";
 
 const data = apidata;
 console.log(data);
@@ -21,10 +22,10 @@ export default function TopModel() {
                   />
                 </div>
                 <h3 className="mt-6 text-sm text-gray-500">
-                  <a href={model.href}>
+                  <Link to={model.href}>
                     <span className="absolute inset-0" />
                     {model.name}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="text-base font-semibold text-gray-900">
                   {model.shortDesc}
